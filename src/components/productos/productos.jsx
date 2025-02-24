@@ -1,9 +1,30 @@
+import React, { useState } from "react";
 import styles from "./productos.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ProductOne from "@/components/productOne/productOne";
 
-export default function Productos({id}) {
+export default function Productos({ id }) {
+  const [index, setIndex] = useState(0);
+
+  const products = [
+    <ProductOne key={0} />,
+    <ProductOne key={1} />,
+    <ProductOne key={2} />,
+  ];
+
+  const nextProduct = () => {
+    if (index < products.length - 1) {
+      setIndex(index + 1);
+    }
+  };
+
+  const prevProduct = () => {
+    if (index > 0) {
+      setIndex(index - 1);
+    }
+  };
+
   return (
     <section id={id} className={styles.containerProductos}>
       <section className={styles.titleSection}>
@@ -16,22 +37,24 @@ export default function Productos({id}) {
         </h2>
       </section>
       <section className={styles.catalogSpace}>
-        <button>
+        <button onClick={prevProduct} disabled={index === 0}>
           <Image src="/arrow-next.svg" alt="icon-btn" width={22} height={22} />
         </button>
-        <section className={styles.carrilProducts}>
-          <ProductOne />
-          <ProductOne />
+        <section
+          className={styles.carrilProducts}
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {products}
         </section>
-        <button>
+        <button onClick={nextProduct} disabled={index === products.length - 1}>
           <Image src="/arrow-next.svg" alt="icon-btn" width={22} height={22} />
         </button>
-        <span></span>
       </section>
       <Link href="/" className={styles.btnComprar}>
         comprar
         <Image src="/buy.svg" alt="icon-btn-comprar" width={22} height={22} />
       </Link>
+      <span className={styles.degradGrey}></span>
     </section>
   );
 }

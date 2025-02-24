@@ -85,7 +85,17 @@
     height: 60px;
     border-radius: 15px;
     border: 3px solid #0c0c0c;
+    outline: 1px solid transparent;
+    cursor: pointer;
+}
+
+.itemImg:hover{
+    outline: 1px solid grey;
+}
+
+.itemImg.active{
     outline: 1px solid #00b931;
+    cursor: default;
 }
 
 .itemImg img{
