@@ -138,7 +138,7 @@ table {
 html,
 body {
   overflow-x: hidden;
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -153,14 +153,4 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   background-color: transparent;
-}
-
-@font-face {
-  font-family: "German";
-  src: url("/font/GERMAN-BEAUTY.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Airstrikegrad";
-  src: url("/font/airstrikegrad.ttf") format("truetype");
 }

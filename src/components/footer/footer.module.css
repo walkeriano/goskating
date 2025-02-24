@@ -10,7 +10,7 @@
 .footer h2 {
   color: #141414;
   font-size: 18.5vw;
-  font-family: "Airstrikegrad";
+  font-family: var(--font-airstrike);
   letter-spacing: 5px;
   line-height: 0.5;
   margin-left: -35px;

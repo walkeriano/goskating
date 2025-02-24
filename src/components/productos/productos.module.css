@@ -20,7 +20,7 @@
 .titleSection h2 {
   font-size: 4.5vw;
   color: white;
-  font-family: "German";
+  font-family: var(--font-german);
   letter-spacing: 3px;
 }
 

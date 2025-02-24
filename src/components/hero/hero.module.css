@@ -20,7 +20,7 @@
 
 .degradText h2{
   position: absolute;
-  font-family: "Airstrikegrad";
+  font-family: var(--font-airstrike);
   color: #002309;
   font-size: 18.5vw;
   left: -35px;
@@ -95,7 +95,7 @@
 .infoHero h1 {
   font-size: 4.5vw;
   text-align: center;
-  font-family: "German";
+  font-family: var(--font-german);
   letter-spacing: 2px;
   line-height: 0.9;
 }

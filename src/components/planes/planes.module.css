@@ -20,7 +20,7 @@
 .titleSection h2{
     font-size: 4.5vw;
     color: white;
-    font-family: "German";
+    font-family: var(--font-german);
     letter-spacing: 3px;
 }
 
@@ -81,7 +81,7 @@
 
 .titleBg{
     font-size: 9rem;
-    font-family: "Airstrikegrad";
+    font-family: var(--font-airstrike);
     position: absolute;
     z-index: 100;
     color: #001E08;
@@ -114,12 +114,12 @@
 .textCard h3{
     font-size: 4.5rem;
     letter-spacing: 2px;
-    font-family: "Airstrikegrad";
+    font-family: var(--font-airstrike);
     line-height: 0.8;
 }
 
 .textCard h3 span{
-    font-family: "German";
+    font-family: var(--font-german);
     color: #00b931;
     margin-left: 15px;
 }
