@@ -1,0 +1,182 @@
+.heroContainer {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.degradText {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.degradText h2{
+  position: absolute;
+  font-family: "Airstrikegrad";
+  color: #002309;
+  font-size: 18.5vw;
+  left: -35px;
+  transform: rotate(3deg);
+  margin-top: -50px;
+}
+
+.degradText div {
+  width: 100%;
+  height: 200px;
+  background: #002309;
+  position: absolute;
+  bottom: 0px;
+  clip-path: polygon(0% 0%, 100% 40%, 100% 100%, 0% 100%);
+}
+
+.leftSpace {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  animation: headerIntro 2s ease-in-out;
+}
+
+.degradPerson{
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.degradPerson img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top left;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.personSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 70vh;
+  width: 75%;
+  margin-bottom: 40px;
+}
+
+.personSection img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.infoHero {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 20px;
+  z-index: 10;
+  margin-top: -50px;
+}
+
+.infoHero h1 {
+  font-size: 4.5vw;
+  text-align: center;
+  font-family: "German";
+  letter-spacing: 2px;
+  line-height: 0.9;
+}
+
+.infoHero h1 span {
+  font-size: 6.5vw;
+  color: #00b931;
+}
+
+.infoHero h2{
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.socialHero{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socialHero a{
+  background-color: transparent;
+  width: 45px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.socialHero a:hover{
+  background-color: #00b931;
+}
+
+.contactButton {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(#0c0c0c00, #0c0c0c);
+  padding-bottom: 40px;
+  z-index: 1;
+}
+
+
+.rightSpace {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  animation: headerIntroRight 2s ease-in-out;
+}
+
+
+@keyframes headerIntro {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes headerIntroRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

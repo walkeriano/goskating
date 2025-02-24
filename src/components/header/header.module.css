@@ -1,0 +1,50 @@
+.headerBox {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 5%;
+  height: 120px;
+  background: linear-gradient(#0c0c0c, #0c0c0c, #0c0c0c, #0c0c0cac, #0c0c0c00);
+  z-index: 100;
+}
+
+.headerBox img{
+    animation: headerIntro 1s ease-in-out;
+}
+
+.sectionButtons {
+  background-color: black;
+  border: 1px solid #232323;
+  border-radius: 50px;
+  animation: headerIntro 1s ease-in-out;
+}
+
+.sectionButtons button {
+  font-size: 0.8rem;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.sectionButtons button:hover {
+  background-color: #00b931;
+}
+
+@keyframes headerIntro {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

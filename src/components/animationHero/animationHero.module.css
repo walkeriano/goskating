@@ -1,0 +1,46 @@
+.sliderVertical {
+  background-color: #161616;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30%;
+  height: 100%;
+  padding: 15px;
+  overflow-y: hidden;
+  gap: 15px;
+  z-index: 0;
+  transform: rotate(3deg);
+  margin-right: 20%;
+  margin-top: -10px;
+}
+
+.sliderVertical > * {
+  /* Aplica la animación a todos los hijos */
+  animation: move 15s infinite linear;
+}
+
+.boxImgVertical {
+  position: relative;
+  width: 100%;
+  min-height: 35%;
+}
+
+.boxImgVertical img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(10%); /* Posición inicial */
+  }
+  50% {
+    transform: translateY(-140%); /* Desplaza hacia abajo */
+  }
+  100% {
+    transform: translateY(10%); /* Vuelve a la posición inicial */
+  }
+}

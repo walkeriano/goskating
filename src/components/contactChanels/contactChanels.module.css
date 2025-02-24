@@ -1,0 +1,45 @@
+.allBtns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.wssBtn{
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    gap: 15px;
+    border: 1px solid #00B931;
+    background-color: #004111;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+.wssBtn:hover{
+    background-color: #00B931;
+}
+
+.otherBtn{
+    height: 45px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    background-color: #202020;
+    border-radius: 50%;
+}
+
+.otherBtn:hover{
+    background-color: #00B931;
+    border: 1px solid #00B931;
+}
