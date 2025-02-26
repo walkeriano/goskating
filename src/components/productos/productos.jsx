@@ -50,10 +50,15 @@ export default function Productos({ id }) {
           <Image src="/arrow-next.svg" alt="icon-btn" width={22} height={22} />
         </button>
       </section>
-      <Link href="/" className={styles.btnComprar}>
+      <a
+        href="https://wa.me/51983552696?text=Hola%20,me%20interesa%20este%20producto"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.btnComprar}
+      >
         comprar
         <Image src="/buy.svg" alt="icon-btn-comprar" width={22} height={22} />
-      </Link>
+      </a>
       <span className={styles.degradGrey}></span>
     </section>
   );

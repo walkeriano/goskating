@@ -4,7 +4,7 @@ export default function ContactChanels() {
   return (
     <section className={styles.allBtns}>
       <a
-        href="https://wa.me/51983552696?text=Hola%20¿me%20brindas%20más%20información?"
+        href="https://wa.me/51983552696?text=Hola%20¿me%20quiero%20inscribirme%20ahora"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.wssBtn}

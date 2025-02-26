@@ -39,7 +39,7 @@ export default function CardPlanesTre() {
         </section>
         <section className={styles.buttonsCard}>
           <a
-            href="https://wa.me/51983552696?text=Hola%20¿me%20brindas%20más%20información?"
+            href="https://wa.me/51983552696?text=Hola%20¿Quiero%20ver%20los%20horarios%20de%20goElite"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.btnContactCard}
