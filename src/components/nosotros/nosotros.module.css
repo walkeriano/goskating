@@ -171,7 +171,6 @@
     text-align: center;
   }
 
-
   .sliderSection{
     width: 100%;
     justify-content: center;
@@ -199,5 +198,22 @@
   
   .sliderSection button:hover {
     background-color: #00b931;
+  }
+
+  .slider > * {
+    /* Aplica la animación a todos los hijos */
+    animation: move 15s infinite linear;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translateX(20%); /* Posición inicial */
+    }
+    50% {
+      transform: translateX(-280%); /* Desplaza hacia abajo */
+    }
+    100% {
+      transform: translateX(20%); /* Vuelve a la posición inicial */
+    }
   }
 }
