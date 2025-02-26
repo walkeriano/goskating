@@ -1,51 +1,54 @@
+import React, { useState } from "react";
 import styles from "./nosotros.module.css";
-import Link from "next/link";
 import Image from "next/image";
 import ContactChanels from "@/components/contactChanels/contactChanels";
 
 export default function Nosotros({ id }) {
+  const [index, setIndex] = useState(0);
+
+  const images = [
+    "/img-slider-one.jpg",
+    "/img-slider-two.jpg",
+    "/img-slider-tre.jpg",
+    "/img-slider-for.jpg",
+    "/img-slider-five.jpg",
+    "/card-kids.jpg",
+    "/card-elite.jpg",
+    "/card-basic.jpg",
+    "/card-competicion.jpg",
+  ];
+
+  const nextSlide = () => {
+    setIndex((prevIndex) => (prevIndex < images.length - 5 ? prevIndex + 1 : 0));
+  };
+
+  const prevSlide = () => {
+    setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : images.length - 5));
+  };
+
   return (
     <section id={id} className={styles.containerNosotros}>
       <h2>
         Escuela de <span>patinaje</span>
       </h2>
       <section className={styles.sliderSection}>
-        <button>
+        <button onClick={prevSlide}>
           <Image src="/arrow-next.svg" alt="icon-wss" width={25} height={25} />
         </button>
-        <section className={styles.slider}>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-one.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-two.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-tre.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-for.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-five.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-one.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-two.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-tre.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-for.jpg" alt="Hero-2" fill={true} />
-          </div>
-          <div className={styles.imageBox}>
-            <Image src="/img-slider-five.jpg" alt="Hero-2" fill={true} />
-          </div>
+        <section
+          className={styles.slider}
+          style={{
+            transform: `translateX(-${index * 19.4}%)`,
+            transition: "transform 0.5s ease-in-out",
+          }}
+        >
+          {images.map((src, i) => (
+            <div className={styles.imageBox} key={i}>
+              <Image src={src} alt={`slide-${i}`} fill={true} />
+            </div>
+          ))}
         </section>
-        <button>
+        <button onClick={nextSlide}>
           <Image src="/arrow-next.svg" alt="icon-wss" width={25} height={25} />
         </button>
       </section>
@@ -53,7 +56,7 @@ export default function Nosotros({ id }) {
         <div className={styles.flexDescription}>
           <p>
             <span>
-              Somos una escuela dedicada a ofrecer programas deformación y
+              Somos una escuela dedicada a ofrecer programas de formación y
               entrenamientos especializados, diseñados para ser herramientas
               clave en el desarrollo físico, social y emocional de la comunidad.
             </span>{" "}
@@ -64,10 +67,10 @@ export default function Nosotros({ id }) {
           </p>
           <p>
             Además, nuestro enfoque está orientado a crear un ambiente inclusivo
-            y motivador, donde cada individuo pueda alcanzar su máximo potencial
+            y motivador, donde cada individuo pueda alcanzar su máximo potencial.
           </p>
         </div>
-        <ContactChanels/>
+        <ContactChanels />
       </section>
     </section>
   );

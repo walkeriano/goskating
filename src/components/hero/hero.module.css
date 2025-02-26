@@ -18,19 +18,19 @@
   z-index: -1;
 }
 
-.degradText h2{
+.degradText h2 {
   position: absolute;
   font-family: var(--font-airstrike);
   color: #002309;
-  font-size: 18.5vw;
-  left: -35px;
-  transform: rotate(3deg);
-  margin-top: -50px;
+  font-size: clamp(280px, 18.2vw, 380px);
+  transform: rotate(2.8deg);
+  margin-top: -2%;
+  margin-left: -4%;
 }
 
 .degradText div {
   width: 100%;
-  height: 200px;
+  height: 45%;
   background: #002309;
   position: absolute;
   bottom: 0px;
@@ -47,7 +47,7 @@
   animation: headerIntro 2s ease-in-out;
 }
 
-.degradPerson{
+.degradPerson {
   position: absolute;
   width: 60%;
   height: 100%;
@@ -55,7 +55,7 @@
   left: 0px;
 }
 
-.degradPerson img{
+.degradPerson img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -70,11 +70,11 @@
   justify-content: center;
   position: relative;
   height: 70vh;
-  width: 75%;
+  width: 85%;
   margin-bottom: 40px;
 }
 
-.personSection img{
+.personSection img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -105,7 +105,7 @@
   color: #00b931;
 }
 
-.infoHero h2{
+.infoHero h2 {
   font-size: 1.2rem;
   font-weight: 500;
   letter-spacing: 1.5px;
@@ -113,14 +113,14 @@
   line-height: 1.3;
 }
 
-.socialHero{
+.socialHero {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
-.socialHero a{
+.socialHero a {
   background-color: transparent;
   width: 45px;
   aspect-ratio: 1;
@@ -130,7 +130,7 @@
   border-radius: 50%;
 }
 
-.socialHero a:hover{
+.socialHero a:hover {
   background-color: #00b931;
 }
 
@@ -148,7 +148,6 @@
   z-index: 1;
 }
 
-
 .rightSpace {
   width: 50%;
   height: 100%;
@@ -157,7 +156,6 @@
   justify-content: flex-end;
   animation: headerIntroRight 2s ease-in-out;
 }
-
 
 @keyframes headerIntro {
   0% {
@@ -178,5 +176,136 @@
   100% {
     transform: translateX(0px);
     opacity: 1;
+  }
+}
+@media (max-width: 1200px) {
+  .personSection {
+    margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .leftSpace {
+    width: 60%;
+  }
+
+  .personSection {
+    height: 55vh;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .personSection img {
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .rightSpace {
+    width: 40%;
+  }
+
+  .infoHero {
+    margin-top: 0px;
+    top: 15vh;
+  }
+
+  .infoHero h1 {
+    font-size: 6.5vw;
+    letter-spacing: 2px;
+    line-height: 1;
+  }
+
+  .infoHero h1 span {
+    font-size: 8.8vw;
+  }
+
+  .infoHero h2 {
+    font-size: 1rem;
+  }
+
+  .degradPerson {
+    width: 75%;
+    top: 20%;
+    left: -10%;
+  }
+}
+
+@media (max-width: 550px) {
+  .leftSpace {
+    position: absolute;
+    left: 0px;
+    width: 90%;
+  }
+
+  .personSection {
+    height: 55vh;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .personSection img {
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .infoHero {
+    top: 15vh;
+    align-items: flex-start;
+    gap: 15px;
+    left: 5%;
+    width: 60vw;
+  }
+
+  .infoHero h1 {
+    font-size: 9.3vw;
+    text-align: left;
+  }
+
+  .infoHero h1 span {
+    font-size: 12vw;
+  }
+
+  .infoHero h2 {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .socialHero {
+    margin-left: -10px;
+    gap: 0px;
+  }
+
+  .socialHero a {
+    width: 40px;
+  }
+
+  .socialHero a img{
+    width: 25px;
+    height: 25px;
+  }
+
+  .rightSpace {
+    position: absolute;
+    right: 0px;
+    width: 50%;
+    z-index: -1;
+    align-items: flex-start;
+  }
+
+  .degradText {
+    height: 60%;
+  }
+
+  .degradText h2 {
+    font-size: clamp(150px, 15vw, 380px);
+    transform: rotate(13deg);
+    margin-top: 25%;
+    margin-left: -4%;
+  }
+
+  .degradPerson {
+    width: 65%;
+    top: 26%;
+    left: -5%;
   }
 }

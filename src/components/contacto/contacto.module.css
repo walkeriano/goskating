@@ -7,14 +7,14 @@
   position: relative;
 }
 
-.bgDegrad{
+.bgDegrad {
   position: absolute;
   width: 50%;
   height: 100%;
   left: 0px;
 }
 
-.bgDegrad img{
+.bgDegrad img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -60,6 +60,30 @@
   align-items: center;
   justify-content: center;
   gap: 20px;
+  position: relative;
+}
+
+.successMessage {
+  width: 65%;
+  height: 100%;
+  background-color: #004111;
+  border: 1px solid #00b931;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  color: white;
+  position: absolute;
+  border-radius: 25px;
+}
+
+.successMessage p {
+  width: 70%;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 1px;
 }
 
 .titleContact {
@@ -96,12 +120,26 @@
   color: white;
 }
 
+.formContact input[type="number"]::-webkit-outer-spin-button,
+.formContact input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Eliminar flechas en Firefox */
+.formContact input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 .formContact input::placeholder {
   font-size: 16px;
   letter-spacing: 1px;
 }
 
-.formContact input:hover {
+.formContact input:hover,
+.formContact input:active,
+.formContact input:focus {
   border: 1px solid #00b931;
 }
 
@@ -116,6 +154,8 @@
   font-size: 16px;
   outline: none;
   color: white;
+  resize: none;
+  font-family: "Helvetica", sans-serif;
 }
 
 .formContact textarea::placeholder {
@@ -123,7 +163,9 @@
   letter-spacing: 1px;
 }
 
-.formContact textarea:hover {
+.formContact textarea:hover,
+.formContact textarea:active,
+.formContact textarea:focus {
   border: 1px solid #00b931;
 }
 
@@ -146,4 +188,34 @@
 
 .formContact button:hover {
   background-color: #00b931;
+}
+
+@media (max-width: 1000px) {
+  .leftContact,
+  .rightContact {
+    width: 45%;
+  }
+}
+
+@media (max-width: 550px) {
+  .containContact {
+    flex-direction: column;
+    width: 100%;
+    height: 125vh;
+    gap: 75px;
+  }
+
+  .leftContact,
+  .rightContact {
+    width: 75%;
+  }
+
+  .bgDegrad {
+    top: 0px;
+  }
+
+  .formContact {
+    width: 75%;
+  }
+  
 }

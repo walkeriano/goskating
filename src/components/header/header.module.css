@@ -11,8 +11,9 @@
   z-index: 100;
 }
 
-.headerBox img{
-    animation: headerIntro 1s ease-in-out;
+.headerBox .logoGo {
+  animation: headerIntro 1s ease-in-out;
+  z-index: 100;
 }
 
 .sectionButtons {
@@ -46,5 +47,86 @@
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+.menuShow,
+.responsiveMenu {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .menuShow {
+    width: 55px;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: black;
+    cursor: pointer;
+    z-index: 100;
+    animation: headerIntro 1s ease-in-out;
+  }
+
+  .menuShow:hover {
+    background-color: #00b931;
+    border: 2px solid #00b931;
+  }
+
+  .sectionButtons {
+    display: none;
+  }
+
+  .responsiveMenu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #004111d4;
+    top: 0px;
+    left: 0px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .responsiveMenu button {
+    font-size: 4vw;
+    padding: 10px 15px;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+  }
+
+  .responsiveMenu button:hover {
+    background-color: #00b931;
+  }
+}
+
+@media (max-width: 550px) {
+  .headerBox {
+    height: 90px;
+  }
+
+
+  .headerBox .logoGo {
+    width: 190px;
+    height: 55px;
+  }
+
+  .menuShow {
+    width: 50px;
+  }
+
+  .responsiveMenu button {
+    font-size: 5.2vw;
   }
 }

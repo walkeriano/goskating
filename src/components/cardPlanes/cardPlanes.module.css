@@ -1,0 +1,343 @@
+.cardPlan {
+  width: 100%;
+  background-color: #151515;
+  border: 1px solid #272727;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+  position: relative;
+}
+
+.cardPlan:hover {
+  border: 1px solid #00b931;
+}
+
+.boxColor {
+  background-color: #001e08;
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  z-index: 0;
+  bottom: 0px;
+  border-radius: 0px 0px 30px 30px;
+  clip-path: polygon(0% 70%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.titleBg {
+  font-size: 9rem;
+  font-family: var(--font-airstrike);
+  position: absolute;
+  z-index: 100;
+  color: #001e08;
+  bottom: 22px;
+  z-index: 0;
+  left: 80px;
+  letter-spacing: 2px;
+  transform: rotate(-3deg);
+}
+
+.titleBg.moreSize {
+  font-size: 11.5rem;
+}
+
+.leftCard {
+  width: 55%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 1;
+  padding: 20px;
+}
+
+.leftCard.switch {
+  height: 500px;
+}
+
+.textCard {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+
+.textCard h3 {
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+  font-family: var(--font-airstrike);
+  line-height: 0.8;
+}
+
+.textCard h3 span {
+  font-family: var(--font-german);
+  color: #00b931;
+  margin-left: 15px;
+}
+
+.textCard h4 {
+  font-size: 0.9rem;
+  color: #00b931;
+  letter-spacing: 1px;
+}
+
+.textCard p {
+  font-size: 1rem;
+  width: 80%;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+.buttonsCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnContactCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background-color: #004111;
+  border: 1px solid #00b931;
+  padding: 0px 20px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  height: 40px;
+  cursor: pointer;
+}
+
+.btnContactCard:hover {
+  background-color: #00b931;
+}
+
+.btnMoreDetails {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  padding: 0px 20px;
+  background-color: #323232;
+  border: 1px solid #505050;
+  color: white;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.btnMoreDetails:hover {
+  background-color: #505050;
+}
+
+.rightCard {
+  width: 45%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.rightCard .portadaCard {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.rightCard .boxMore {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #004111;
+  border: 1px solid #00b931;
+  z-index: 1;
+  right: 15px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.rightCard:hover .boxMore {
+  background-color: #00b931;
+}
+
+.rightCardShow {
+  width: 45%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: pointer;
+  gap: 15px;
+}
+
+.viewImage {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.visualizerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.flexAllImages {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.boxImage {
+  width: 25%;
+  height: 100px;
+  border-radius: 5px;
+  position: relative;
+  border: 3px solid #0c0c0c;
+  outline: 1px solid transparent;
+  border-radius: 18px;
+}
+
+.boxImage:hover {
+  outline: 1px solid grey;
+}
+
+.boxImage.active {
+  outline: 1px solid #00b931;
+  cursor: default;
+}
+
+.boxImage .boxImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@media (max-width: 1000px) {
+  .leftCard {
+    width: 55%;
+    padding: 5px;
+  }
+
+  .textCard p {
+    font-size: 0.9rem;
+  }
+
+  .btnContactCard {
+    gap: 10px;
+    padding: 0px 15px;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .btnMoreDetails {
+    gap: 10px;
+    padding: 0px 15px;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .leftCard {
+    width: 55%;
+    padding: 0px;
+  }
+
+  .buttonsCard {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardPlan {
+    flex-direction: column-reverse;
+    padding: 0px 0px 20px 0px;
+    gap: 35px;
+  }
+
+  .rightCard {
+    width: 100%;
+  }
+
+  .rightCard .portadaCard {
+    border-radius: 28px;
+  }
+
+  .rightCard .boxMore {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rightCardShow {
+    width: 100%;
+  }
+
+  .visualizerImg {
+    border-radius: 28px;
+  }
+
+  .flexAllImages {
+    width: 95%;
+  }
+
+  .leftCard {
+    width: 100%;
+    align-items: center;
+  }
+
+  .textCard {
+    align-items: center;
+  }
+  
+  .textCard h3 {
+    font-size: 4rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .textCard p {
+    text-align: center;
+  }
+
+  .titleBg {
+    font-size: 7rem;
+    bottom: 45px;
+    z-index: 0;
+    left: 15px;
+    transform: rotate(-15deg);
+  }
+  
+  .titleBg.moreSize {
+    font-size: 8rem;
+  }
+}

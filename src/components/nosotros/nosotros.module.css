@@ -21,10 +21,13 @@
 
 .sliderSection {
   width: 90%;
+  max-width: 1550px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .sliderSection button {
@@ -43,26 +46,25 @@
 }
 
 .sliderSection button:nth-child(1) {
-  left: -25px;
+  left: 10px;
   transform: rotate(180deg);
 }
 
 .sliderSection button:nth-child(3) {
-  right: -25px;
+  right: 10px;
 }
 
-.sliderSection button:hover{
-    background-color: #00b931;
+.sliderSection button:hover {
+  background-color: #00b931;
 }
 
 .slider {
   width: 100%;
+  max-width: 1550px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  overflow-x: scroll;
-  overflow-y: hidden;
 }
 
 .slider::-webkit-scrollbar {
@@ -79,7 +81,7 @@
 }
 
 .imageBox {
-  min-width: 19.4%;
+  min-width: 16.1%;
   height: 55vh;
   display: flex;
   align-items: center;
@@ -99,11 +101,10 @@
   opacity: 0.5;
 }
 
-
-.imageBox img:hover{
-    border: 2px solid #00b931;
-    filter: grayscale(0);
-    opacity: 1;
+.imageBox img:hover {
+  border: 2px solid #00b931;
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 .infoNosotros {
@@ -135,4 +136,68 @@
 
 .flexDescription p span {
   font-weight: 700;
+}
+
+@media (max-width: 1400px){
+  .imageBox {
+    min-width: 19.3%;
+  }
+
+  .containerNosotros h2 {
+    font-size: 5.5vw;
+  }
+}
+
+
+@media (max-width: 850px){
+
+  .containerNosotros h2 {
+    font-size: 6.7vw;
+  }
+
+  .imageBox {
+    min-width: 32.5%;
+  }
+}
+
+@media (max-width: 550px){
+  .containerNosotros {
+    padding-top: 90px;
+  }
+
+  .containerNosotros h2 {
+    font-size: 2.8rem;
+    width: 75%;
+    text-align: center;
+  }
+
+
+  .sliderSection{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .imageBox {
+    min-width: 40%;
+  }
+
+  .sliderSection button {
+    position: absolute;
+    width: 45px;
+    bottom: 20px;
+  }
+  
+  .sliderSection button:nth-child(1) {
+    left: auto;
+    margin-left: -60px;
+  }
+  
+  .sliderSection button:nth-child(3) {
+    right: auto;
+    margin-right: -60px;
+  }
+  
+  .sliderSection button:hover {
+    background-color: #00b931;
+  }
 }

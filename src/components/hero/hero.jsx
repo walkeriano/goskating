@@ -5,6 +5,9 @@ import AnimationHero from "@/components/animationHero/animationHero";
 export default function Hero({ id }) {
   return (
     <section id={id} className={styles.heroContainer}>
+      <section className={styles.contactButton}>
+        <ContactChanels />
+      </section>
       <section className={styles.infoHero}>
         <h1>
           Patinaje de
@@ -26,9 +29,6 @@ export default function Hero({ id }) {
             <Image src="/fb.svg" alt="icon-hero-3" width={27} height={27} />
           </a>
         </div>
-      </section>
-      <section className={styles.contactButton}>
-        <ContactChanels />
       </section>
       <section className={styles.leftSpace}>
         <section className={styles.personSection}>
