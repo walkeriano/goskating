@@ -32,7 +32,6 @@ export default function Footer() {
           <ul>
             <li>993 744 957</li>
             <li>contacto@gmail.com</li>
-            <li>goskating.com</li>
             <li>Lima, Perú</li>
           </ul>
           <div className={styles.socialMediaFooter}>

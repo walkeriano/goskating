@@ -205,17 +205,32 @@
     gap: 75px;
   }
 
+  .leftContact {
+    gap: 20px;
+  }
+
+  .leftContact h2 {
+    font-size: 3.2rem;
+    line-height: 1.1;
+  }
+
+  .leftContact p{
+    margin-bottom: 10px;
+  }
+
   .leftContact,
   .rightContact {
-    width: 75%;
+    width: 85%;
   }
 
   .bgDegrad {
-    top: 0px;
+    width: 80%;
+    height: 65%;
+    top: -30px;
   }
 
   .formContact {
-    width: 75%;
+    width: 85%;
   }
   
 }
