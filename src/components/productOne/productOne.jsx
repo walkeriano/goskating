@@ -15,8 +15,8 @@ export default function ProductOne() {
       <section className={styles.infoProduct}>
         <h3>Patín lineal 4 ruedas conex 2025</h3>
         <div className={styles.precioProduct}>
-          <p>S/. 130.00</p>
-          <p>S/. 130.00</p>
+          <p>S/.130.00</p>
+          <p>S/.130.00</p>
         </div>
         <ul>
           <li>Tallas: 32 - 43</li>

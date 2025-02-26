@@ -105,34 +105,40 @@
 
 @media (max-width: 850px) {
   .containerInfo {
-    height: 85%;
+    height: 90%;
     flex-direction: column;
     gap: 15px;
   }
 
   .boxImageProduct {
-    width: 80%;
-    height: 60%;
+    width: 70%;
+    height: 50%;
     position: relative;
   }
 
   .infoProduct {
     width: 80%;
-    height: 40%;
+    height: 50%;
     align-items: center;
     gap: 20px;
   }
 
   .infoProduct h3 {
-    font-size: 1.2rem;
+    width: 75%;
+    font-size: 1rem;
     text-align: center;
+    line-height: 1.3;
   }
 
   .infoProduct ul {
     align-items: center;
   }
-  
+
   .infoProduct ul li {
+    font-size: 0.8rem;
+  }
+
+  .precioProduct p {
     font-size: 0.9rem;
   }
 }
