@@ -21,7 +21,7 @@
 
 .sliderSection {
   width: 90%;
-  max-width: 1550px;
+  max-width: 1700px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -60,11 +60,11 @@
 
 .slider {
   width: 100%;
-  max-width: 1550px;
+  max-width: 1700px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 5px;
 }
 
 .slider::-webkit-scrollbar {
@@ -81,7 +81,7 @@
 }
 
 .imageBox {
-  min-width: 16.1%;
+  min-width: 16.3%;
   height: 55vh;
   display: flex;
   align-items: center;

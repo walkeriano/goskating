@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./nosotros.module.css";
 import Image from "next/image";
 import ContactChanels from "@/components/contactChanels/contactChanels";
 
 export default function Nosotros({ id }) {
   const [index, setIndex] = useState(0);
-
+  const sliderRef = useRef(null);
+  const itemRef = useRef(null);
   const images = [
     "/img-slider-one.jpg",
     "/img-slider-two.jpg",
@@ -18,12 +19,34 @@ export default function Nosotros({ id }) {
     "/card-competicion.jpg",
   ];
 
+  const [itemWidth, setItemWidth] = useState(0);
+  const [maxIndex, setMaxIndex] = useState(0);
+
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (itemRef.current && sliderRef.current) {
+        const singleItemWidth = itemRef.current.getBoundingClientRect().width;
+        const sliderWidth = sliderRef.current.getBoundingClientRect().width;
+        const visibleItems = Math.floor(sliderWidth / singleItemWidth);
+        setItemWidth(singleItemWidth);
+        setMaxIndex(images.length - visibleItems);
+      }
+    };
+
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
+  }, [images.length]);
+
   const nextSlide = () => {
-    setIndex((prevIndex) => (prevIndex < images.length - 5 ? prevIndex + 1 : 0));
+    setIndex((prevIndex) => (prevIndex < maxIndex ? prevIndex + 1 : 0));
   };
 
   const prevSlide = () => {
-    setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : images.length - 5));
+    setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : maxIndex));
   };
 
   return (
@@ -37,13 +60,18 @@ export default function Nosotros({ id }) {
         </button>
         <section
           className={styles.slider}
+          ref={sliderRef}
           style={{
-            transform: `translateX(-${index * 19.4}%)`,
+            transform: `translateX(-${index * itemWidth}px)`,
             transition: "transform 0.5s ease-in-out",
           }}
         >
           {images.map((src, i) => (
-            <div className={styles.imageBox} key={i}>
+            <div
+              className={styles.imageBox}
+              key={i}
+              ref={i === 0 ? itemRef : null}
+            >
               <Image src={src} alt={`slide-${i}`} fill={true} />
             </div>
           ))}
@@ -67,7 +95,8 @@ export default function Nosotros({ id }) {
           </p>
           <p>
             Además, nuestro enfoque está orientado a crear un ambiente inclusivo
-            y motivador, donde cada individuo pueda alcanzar su máximo potencial.
+            y motivador, donde cada individuo pueda alcanzar su máximo
+            potencial.
           </p>
         </div>
         <ContactChanels />

@@ -103,7 +103,7 @@ export default function CardPlanesFor() {
         </section>
       ) : (
         <section className={styles.rightCard}>
-          <span className={styles.boxMore}>
+          <span className={styles.boxMore} onClick={() => setShowCard(true)} >
             <Image src="/more.svg" alt="icon-btn" width={18} height={18} />
           </span>
           <Image
@@ -114,7 +114,7 @@ export default function CardPlanesFor() {
           />
         </section>
       )}
-      <span className={`${styles.titleBg} ${showCard ? styles.moreSize : ""}`}>
+      <span className={`${styles.titleBgTra} ${showCard ? styles.moreSize : ""}`}>
         transition
       </span>
       <div className={styles.boxColor}></div>

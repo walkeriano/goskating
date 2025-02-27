@@ -62,6 +62,7 @@
   justify-content: center;
   gap: 20px;
   position: relative;
+  z-index: 1;
 }
 
 .successMessage {
@@ -142,6 +143,17 @@
 .formContact input:active,
 .formContact input:focus {
   border: 1px solid #00b931;
+}
+
+.formContact input:-webkit-autofill,
+.formContact input:-webkit-autofill:hover,
+.formContact input:-webkit-autofill:focus,
+.formContact input:-webkit-autofill:active {
+  -webkit-text-fill-color: white !important; /* Cambia el color del texto */
+  -webkit-box-shadow: 0 0 0px 1000px #0048ff00 inset !important; /* Fondo blanco para el campo */
+  box-shadow: 0 0 0px 1000px #0048ff00 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+  font-size: 16px;
 }
 
 .formContact textarea {
