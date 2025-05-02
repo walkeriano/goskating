@@ -24,16 +24,29 @@ export default function CardPlanesTre() {
           </h3>
           <h4>Nivel: Solo para avanzados</h4>
           <p>
-            En este nivel, los niños comienzan a aprender los principios básicos
-            del patinaje, como el equilibrio y los movimientos fundamentales.
+            Entrenamiento de Alto Rendimiento en Patinaje El Nivel GO ELITE es
+            la cuarta y más avanzada etapa de nuestro aprendizaje en GO Skating,
+            enfocada en la preparación física, técnica y mental para el alto
+            rendimiento en el patinaje. En este nivel, los patinadores entrenan
+            con un enfoque profesional, combinando diversas disciplinas para
+            mejorar su desempeño en pista y competencias. Lo que se desarrolla
+            en este nivel: Técnica avanzada en patines: perfeccionamiento del
+            empuje, postura aerodinámica y giros a alta velocidad.
           </p>
           {showCard && (
             <p>
-              A través de clases dinámicas y juegos, desarrollan confianza y
-              coordinación, sentando las bases para un progreso efectivo. Este
-              nivel es crucial para avanzar hacia una etapa en la quepodrán
-              disfrutar aún más del deporte y mejorar sus habilidadesde manera
-              significativa.
+              Entrenamiento en pista: adaptación a superficies profesionales,
+              estrategia de carrera y resistencia. Preparación física integral:
+              sesiones en gimnasio para fortalecer músculos clave (piernas,
+              core, espalda) y mejorar potencia y resistencia. Ciclismo como
+              complemento: entrenamiento cardiovascular y de resistencia para
+              optimizar el rendimiento en patines. Desarrollo mental y
+              estratégico: trabajo en disciplina, concentración y planificación
+              para competiciones. El Nivel GO ELITE está diseñado para
+              patinadores que buscan un alto rendimiento y aspiran a competir
+              profesionalmente. A través de un entrenamiento estructurado y
+              multidisciplinario, los alumnos alcanzan su máximo potencial,
+              dominando el patinaje a un nivel élite.
             </p>
           )}
         </section>
@@ -114,7 +127,9 @@ export default function CardPlanesTre() {
           />
         </section>
       )}
-      <span className={`${styles.titleBg} ${showCard ? styles.moreSize : ""}`}>elite</span>
+      <span className={`${styles.titleBg} ${showCard ? styles.moreSize : ""}`}>
+        elite
+      </span>
       <div className={styles.boxColor}></div>
     </section>
   );

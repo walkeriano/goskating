@@ -24,16 +24,25 @@ export default function CardPlanesFor() {
           </h3>
           <h4>Nivel: Competición</h4>
           <p>
-            En este nivel, los niños comienzan a aprender los principios básicos
-            del patinaje, como el equilibrio y los movimientos fundamentales.
+            Camino al Patinaje Profesional El Nivel GO TRANSICIÓN es la tercera
+            etapa de nuestro aprendizaje del patinaje, donde los alumnos
+            comienzan a desarrollar mayor control, agilidad y precisión en sus
+            movimientos. Este nivel sirve como puente entre las habilidades
+            básicas y el patinaje avanzado, preparando a los patinadores para el
+            uso de patines profesionales.
           </p>
           {showCard && (
             <p>
-              A través de clases dinámicas y juegos, desarrollan confianza y
-              coordinación, sentando las bases para un progreso efectivo. Este
-              nivel es crucial para avanzar hacia una etapa en la quepodrán
-              disfrutar aún más del deporte y mejorar sus habilidadesde manera
-              significativa.
+              En este nivel desarrollamos: Mayor dominio del equilibrio y
+              estabilidad a diferentes velocidades. Técnicas de deslizamiento
+              eficiente y empuje avanzado. Giros más precisos y controlados.
+              Frenado en diferentes situaciones y con distintas técnicas.
+              Introducción a la técnica de patinaje profesional según la
+              disciplina (velocidad, freestyle, artístico, hockey, entre otros).
+              Este nivel es clave para aquellos que desean evolucionar en el
+              patinaje y prepararse para manejar patines de alto rendimiento.
+              Con práctica y dedicación, los alumnos lograrán confianza y
+              destreza, acercándose al patinaje profesional.
             </p>
           )}
         </section>
@@ -103,7 +112,7 @@ export default function CardPlanesFor() {
         </section>
       ) : (
         <section className={styles.rightCard}>
-          <span className={styles.boxMore} onClick={() => setShowCard(true)} >
+          <span className={styles.boxMore} onClick={() => setShowCard(true)}>
             <Image src="/more.svg" alt="icon-btn" width={18} height={18} />
           </span>
           <Image
@@ -114,7 +123,9 @@ export default function CardPlanesFor() {
           />
         </section>
       )}
-      <span className={`${styles.titleBgTra} ${showCard ? styles.moreSize : ""}`}>
+      <span
+        className={`${styles.titleBgTra} ${showCard ? styles.moreSize : ""}`}
+      >
         transition
       </span>
       <div className={styles.boxColor}></div>

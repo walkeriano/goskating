@@ -20,8 +20,8 @@ export default function Planes({ id }) {
       <section className={styles.flexBoxCards}>
         <CardPlanesOne />
         <CardPlanesTwo />
-        <CardPlanesTre />
         <CardPlanesFor />
+        <CardPlanesTre />
       </section>
     </section>
   );

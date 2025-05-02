@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import styles from "./productOne.module.css";
 import Image from "next/image";
 
-export default function ProductOne() {
-  const [selectedImage, setSelectedImage] = useState("/item-1-1.png");
+export default function ProductTen() {
+  const [selectedImage, setSelectedImage] = useState("/item-10-1.png");
 
-  const images = ["/item-1-1.png", "/item-1-2.png", "/item-1-3.png"];
+  const images = ["/item-10-1.png", "/item-10-2.png"];
 
   return (
     <section className={styles.containerInfo}>
@@ -13,14 +13,14 @@ export default function ProductOne() {
         <Image src={selectedImage} alt="image-product" fill={true} />
       </section>
       <section className={styles.infoProduct}>
-        <h3>Licra de entrenamiento - go skating</h3>
+        <h3>Patines sho-vit IVOILA - Celeste</h3>
         <div className={styles.precioProduct}>
           <p>S/.130.00</p>
           <p>S/.130.00</p>
         </div>
         <ul>
-          <li>Tallas: Y-110 / Y-120 / Y-130 / Y-140 / Y-150</li>
-          <li>Material: Licra</li>
+          <li>Tallas: 30-33 / 38-41</li>
+          <li>Material: Plástico</li>
           <li>Ruedas: Poliotireno</li>
         </ul>
         <section className={styles.flexImages}>

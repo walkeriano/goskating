@@ -24,16 +24,20 @@ export default function CardPlanesTwo() {
           </h3>
           <h4>Nivel: Iniciados e intermedios</h4>
           <p>
-            En este nivel, los niños comienzan a aprender los principios básicos
-            del patinaje, como el equilibrio y los movimientos fundamentales.
+            El Nivel GO BASIC es nuestra segunda etapa del aprendizaje del
+            patinaje, enfocada en reforzar las habilidades básicas y mejorar la
+            estabilidad, coordinación y control del movimiento. Aquí, los
+            patinadores comienzan a desarrollar mayor fluidez y seguridad en su
+            desplazamiento.
           </p>
           {showCard && (
             <p>
-              A través de clases dinámicas y juegos, desarrollan confianza y
-              coordinación, sentando las bases para un progreso efectivo. Este
-              nivel es crucial para avanzar hacia una etapa en la quepodrán
-              disfrutar aún más del deporte y mejorar sus habilidadesde manera
-              significativa.
+              Objetivos del Nivel GO BASIC: Perfeccionamiento de la postura y
+              equilibrio. Técnica de deslizamiento con ambos pies. Giros básicos
+              y cambios de dirección. Frenado con mayor control. Introducción a
+              la técnica de empuje para mejorar la velocidad. En este nivel, los
+              patinadores adquieren mayor confianza y comienzan a moverse con
+              mayor naturalidad, preparándose para maniobras más avanzadas.
             </p>
           )}
         </section>
@@ -114,7 +118,9 @@ export default function CardPlanesTwo() {
           />
         </section>
       )}
-      <span className={`${styles.titleBg} ${showCard ? styles.moreSize : ""}`}>basic</span>
+      <span className={`${styles.titleBg} ${showCard ? styles.moreSize : ""}`}>
+        basic
+      </span>
       <div className={styles.boxColor}></div>
     </section>
   );

@@ -24,16 +24,20 @@ export default function CardPlanesOne() {
           </h3>
           <h4>Nivel: Exclusivo para niño(a)s</h4>
           <p>
-            En este nivel, los niños comienzan a aprender los principios básicos
-            del patinaje, como el equilibrio y los movimientos fundamentales.
+            Es nuestra etapa inicial en el aprendizaje del patinaje, diseñada
+            para quienes nunca han patinado o tienen poca experiencia. En este
+            nivel, se trabajan las bases fundamentales para desarrollar
+            equilibrio, confianza y control sobre los patines.
           </p>
           {showCard && (
             <p>
-              A través de clases dinámicas y juegos, desarrollan confianza y
-              coordinación, sentando las bases para un progreso efectivo. Este
-              nivel es crucial para avanzar hacia una etapa en la quepodrán
-              disfrutar aún más del deporte y mejorar sus habilidadesde manera
-              significativa.
+              Objetivos del Nivel GO: Familiarización con el equipo (patines,
+              protecciones y casco). Postura y equilibrio adecuado en posición
+              básica. Técnicas de seguridad: cómo caer y levantarse
+              correctamente. Desplazamiento inicial: marcha en V y pasos cortos.
+              Aprendizaje del frenado básico Este nivel es clave para adquirir
+              confianza y seguridad antes de avanzar a técnicas más complejas,
+              tomando en cuenta que en este nivel no importa la edad del alumno.
             </p>
           )}
         </section>

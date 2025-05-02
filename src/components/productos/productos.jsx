@@ -3,14 +3,37 @@ import styles from "./productos.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import ProductOne from "@/components/productOne/productOne";
+import ProductTwo from "@/components/productOne/productTwo";
+import ProductTre from "@/components/productOne/productTre";
+import ProductFor from "@/components/productOne/productFor";
+import ProductFive from "@/components/productOne/productFive";
+import ProductSix from "@/components/productOne/productSix";
+import ProductSeven from "@/components/productOne/productSeven";
+import ProductOcho from "@/components/productOne/productOcho";
+import ProductNine from "@/components/productOne/productNine";
+import ProductTen from "@/components/productOne/productTen";
+
+
+
+
+
+
+
 
 export default function Productos({ id }) {
   const [index, setIndex] = useState(0);
 
   const products = [
     <ProductOne key={0} />,
-    <ProductOne key={1} />,
-    <ProductOne key={2} />,
+    <ProductTwo key={1} />,
+    <ProductTre key={2} />,
+    <ProductFor key={3} />,
+    <ProductFive key={4} />,
+    <ProductSix key={5} />,
+    <ProductSeven key={6} />,
+    <ProductOcho key={7} />,
+    <ProductNine key={8} />,
+    <ProductTen key={9} />,
   ];
 
   const nextProduct = () => {
