@@ -19,13 +19,13 @@ export default function Hero({ id }) {
           entrenamientos personalizados
         </h2>
         <div className={styles.socialHero}>
-          <a href="https://www.facebook.com/Comopezenelaula" target="_blank">
+          <a href="https://www.instagram.com/goskating_?igsh=NTBicThiZzNxZnJm" target="_blank">
             <Image src="/ins.svg" alt="icon-hero-1" width={25} height={25} />
           </a>
-          <a href="https://www.facebook.com/Comopezenelaula" target="_blank">
+          <a href="https://www.tiktok.com/@goskating_?_t=ZS-8zdflx3UUEC&_r=1" target="_blank">
             <Image src="/tk.svg" alt="icon-hero-2" width={27} height={27} />
           </a>
-          <a href="https://www.facebook.com/Comopezenelaula" target="_blank">
+          <a href="https://www.facebook.com/share/1CUAiZkjiV/?mibextid=wwXIfr" target="_blank">
             <Image src="/fb.svg" alt="icon-hero-3" width={27} height={27} />
           </a>
         </div>

@@ -35,13 +35,13 @@ export default function Footer() {
             <li>Lima, Perú</li>
           </ul>
           <div className={styles.socialMediaFooter}>
-            <Link href="/" className={styles.btnSocial}>
+            <Link href="https://www.instagram.com/goskating_?igsh=NTBicThiZzNxZnJm" target="_blank" className={styles.btnSocial}>
               <Image src="/ins.svg" alt="icon-btn" width={30} height={30} />
             </Link>
-            <Link href="/" className={styles.btnSocial}>
+            <Link  href="https://www.tiktok.com/@goskating_?_t=ZS-8zdflx3UUEC&_r=1" target="_blank" className={styles.btnSocial}>
               <Image src="/tk.svg" alt="icon-btn" width={30} height={30} />
             </Link>
-            <Link href="/" className={styles.btnSocial}>
+            <Link href="https://www.facebook.com/share/1CUAiZkjiV/?mibextid=wwXIfr" target="_blank" className={styles.btnSocial}>
               <Image src="/fb.svg" alt="icon-btn" width={30} height={30} />
             </Link>
           </div>
